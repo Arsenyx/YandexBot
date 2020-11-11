@@ -7,12 +7,11 @@
 // @match        https://yandex.ru/*
 // @grant        none
 // ==/UserScript==
-
-document.getElementById("text").value = "Гобой";
-
-let button = document.getElementsByClassName("button_theme_websearch")[0];
-if (button != NaN){
-   button.click();
+if (document.getElementById("text") != null)
+{
+    document.getElementById("text").value = "Гобой";
+    let button = document.getElementsByClassName("button_theme_websearch")[0];
+      button.click();
 }else{
     let links = document.links;
     for(let i=0; i<links.length; i++){
